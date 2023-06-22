@@ -1,8 +1,8 @@
 console.log("script is connected")
-//adds a class of featured to first section element on page 
+
 section = document.querySelector("section");
 section.classList.add("featured");
-//building article formatted as in readme
+
 
 let article = document.createElement("article");
 
@@ -40,21 +40,20 @@ a.textContent = "Read More...";
 
 
 newP.append(span);
-//puts span inside newP
+
 newP.append(a)
-//puts a inside of newP
+
 
 aside.append(newP);
-//puts newP inside of aside
+
 
 article.append(image, h3, p, aside);
-//puts image, h3, p, aside into article, in that order from top to
-//bottom on the page 
+
 
 let posts = document.querySelector("section.posts");
 
 posts.append(article);
-//puts our article into posts; which we declared was section.posts
+
 
 
 let buildingArticle = posts.children[1];
