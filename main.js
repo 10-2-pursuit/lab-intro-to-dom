@@ -2,7 +2,6 @@ const sec = document.querySelector('section');
 
 sec.classList.add("featured");
 
-
 function createArticle(){
     let section = document.getElementsByClassName("posts");
 
@@ -54,7 +53,6 @@ function wrapping(){
 wrapping();
 
 function removeElem(){
-    let header = document.querySelector('header');
     let sec = document.getElementsByClassName("posts");
 
     let links = document.querySelectorAll('a');
