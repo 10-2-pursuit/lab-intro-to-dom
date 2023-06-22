@@ -59,7 +59,8 @@ function removeElem(){
     links[0].remove();
 
     let span = document.querySelectorAll('span');
-    span.forEach(i => i.remove());
+    //span.forEach(i => i.remove());
+    span[0].remove();
     
     let child = sec[0].children;
     child[2].remove();
