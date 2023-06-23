@@ -6,6 +6,8 @@ document.querySelectorAll("section")[0].setAttribute(
 )
 
 
+//Create article with Js and add to section.posts
+
 function createArticle () {
     let newArticle = document.createElement("article")
     newArticle.img = document.createElement('img')
@@ -44,12 +46,11 @@ let aside = document.createElement("aside")
     return newArticle
     
 }
-
 let postsElement = document.getElementsByClassName("posts")[0]
-postsElement.appendChild(createArticle())
+let newArticle = createArticle()
+postsElement.appendChild(newArticle)
 
 // Swap first and second article.
-
 let post2 = postsElement.querySelectorAll("article")[1]
 post2.remove()
 postsElement.prepend(post2)
@@ -57,3 +58,15 @@ postsElement.prepend(post2)
 // Remove all posts link from header
 let nav = document.querySelector("nav")
 nav.querySelectorAll('li')[0].remove()
+
+
+//Remove span from featured post
+let featuredSection = document.getElementsByClassName("featured")[0]
+featuredSection.querySelector('span').remove()
+
+
+//Remove last post
+
+newArticle.remove()
+
+console.log(featuredSection)
