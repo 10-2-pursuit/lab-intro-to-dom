@@ -66,7 +66,10 @@ featuredSection.querySelector('span').remove()
 
 
 //Remove last post
-
 newArticle.remove()
 
-console.log(featuredSection)
+// Remove titles from non featured posts
+let listedPosts = postsElement.querySelectorAll("article")
+for (article of listedPosts) {
+    article.querySelector('h3').remove()
+}
