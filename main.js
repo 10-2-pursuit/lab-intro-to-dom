@@ -34,4 +34,27 @@ stopPlanning.append(firstPara);
 stopPlanning.append(aside);
 
 span.innerHTML = `<strong>Read Time:</strong> 4 Minutes`;
+secondPara.append(span);
+secondPara.append(a);
+aside.append(secondPara);
+
+posts.append(stopPlanning);
+
+section.classList.add('featured');
+
+const firstArticle = posts.children[0];
+
+const secondArticle = posts.children[1];
+
+posts.replaceChildren(secondArticle, firstArticle, stopPlanning);
+headerNavUl[0].remove();
+
+const featured = document.querySelector('.featured');
+const removedSpan = featured.children[1].lastChild.previousSibling.childNodes[1].firstChild.nextSibling;
+removedSpan.remove();
+stopPlanning.remove();
+
+for (let i = 0; i < posts.children.length; i++) {
+    posts.children[i].childNodes[3].remove();
+}
 
